@@ -1,9 +1,11 @@
 import express from 'express'
 import path from 'path'
 const app = express()
-const port = 3000
+const port = 5000
 
 const __dirname = path.resolve()
+console.log("dirname :=>", __dirname);
+console.log("Path dirname :=>", path.join(__dirname, './react-express/build'));
 
 app.use('/', express.static(path.join(__dirname, './react-express/build')))
 
