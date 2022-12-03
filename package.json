@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Saaim-K/React-App-With-NodeJS#readme",
   "dependencies": {
+    "axios": "^1.2.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   }
 }
