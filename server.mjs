@@ -15,8 +15,8 @@ app.get('/weather', (req, res) => {
     res.send({
         city: 'Karachi',
         temp: '30 °C',
-        min:'19 °C',
         max:' 35°C',
+        min:'19 °C',
         humid: 45,
     })
 })
@@ -29,4 +29,5 @@ app.use('*', express.static(path.join(__dirname, './react-express/build')))
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
+    console.log(`Development mode started on port ${port}`)
 })
