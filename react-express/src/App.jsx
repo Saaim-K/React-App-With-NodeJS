@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 let baseUrl = ''
-if (window.location.href.split(':')[0] === 'http') { baseUrl = 'http://localhost:5000' }
+if (window.location.href.split(':')[0] === 'http') { baseUrl = 'http://localhost:5001' }
 
 const App = () => {
   const [city, setCity] = useState('')
@@ -15,7 +15,7 @@ const App = () => {
   const getWeather = (e) => {
     e.preventDefault()
     axios.get(`${baseUrl}/weather`)
-      .then(function (response) {
+      .then(response => {
         console.log(response.data);
         setCity(response.data.city)
         setTime(response.data.time)

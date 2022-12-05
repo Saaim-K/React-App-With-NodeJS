@@ -2,11 +2,11 @@ import express from 'express'
 import path from 'path'
 import cors from 'cors'
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5001
 
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/abc', (req, res) => {
     console.log('Request IP :', req.ip)
     res.send('<h1>إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ</h1>')
 })
