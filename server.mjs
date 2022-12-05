@@ -6,18 +6,20 @@ const port = 5000
 
 app.use(cors());
 
-app.get('/abc', (req, res) => {
+app.get('/', (req, res) => {
     console.log('Request IP :', req.ip)
     res.send('<h1>إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ</h1>')
 })
+
 app.get('/weather', (req, res) => {
     console.log('Request IP :', req.ip)
     res.send({
         city: 'Karachi',
         temp: '30 °C',
-        max:' 35°C',
-        min:'19 °C',
+        max: ' 35°C',
+        min: '19 °C',
         humid: 45,
+        time: new Date().toDateString()
     })
 })
 
