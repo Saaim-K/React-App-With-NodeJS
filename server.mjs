@@ -10,7 +10,11 @@ app.get('/abc', (req, res) => {
     console.log('Request IP :', req.ip)
     res.send('<h1>إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ</h1>')
 })
-
+app.get('/cde', (req, res) => {
+    console.log('Request IP :', req.ip)
+    res.send(`<h1>Saaim</h1>`)
+})
+ 
 app.get('/weather', (req, res) => {
     console.log('Request IP :', req.ip)
     res.send({
@@ -24,7 +28,7 @@ app.get('/weather', (req, res) => {
 })
 
 const __dirname = path.resolve()
-console.log("dirname :=>", __dirname);
+console.log(" dirname :=> ", __dirname);
 app.use('/', express.static(path.join(__dirname, './react-express/build')))
 app.use('*', express.static(path.join(__dirname, './react-express/build')))
 
